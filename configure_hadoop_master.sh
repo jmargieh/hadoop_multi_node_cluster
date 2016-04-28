@@ -5,9 +5,9 @@ sudo mkdir -p /usr/local/hadoop/hadoop_data/hdfs/namenode
 sudo mkdir -p /usr/local/hadoop/hadoop_data/hdfs/datanode
 sudo chmod -R 775 /usr/local/hadoop/
 
-
-#sudo mkdir -p /home/vagrant/hadoop-2.7.2/hdfs/datanode
-#sudo chmod -R 775 /home/vagrant/hadoop-2.7.2/hdfs/datanode
+sudo rm -rf /home/vagrant/hadoop-2.7.2/tmp/
+sudo mkdir -p /home/vagrant/hadoop-2.7.2/tmp/
+sudo chmod -R 775 /home/vagrant/hadoop-2.7.2/tmp/
 
 
 cd /home/vagrant/hadoop-2.7.2/etc/hadoop/
@@ -25,6 +25,10 @@ wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/maste
 #OK
 rm -f yarn-site.xml
 wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/yarn-site.xml
+#OK
+rm -f hadoop-env.sh
+wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/hadoop-env.sh
+
 #OK
 #rm -f slaves
 #wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/slaves
