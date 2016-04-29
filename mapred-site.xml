@@ -55,6 +55,6 @@
     </property>
     <property>
         <name>mapreduce.jobtracker.address</name>
-        <value>localhost:8021</value>
+        <value>master:8021</value>
     </property>
 </configuration>
