@@ -46,7 +46,7 @@ Vagrant.configure(2) do |config|
 
             cp /vagrant/after_startup.sh .
             sudo chmod +x ./after_startup.sh
-            cp /vagrant//start.sh .
+            cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
 
 
@@ -96,7 +96,7 @@ Vagrant.configure(2) do |config|
 
             cp /vagrant/after_startup.sh .
             sudo chmod +x ./after_startup.sh
-            cp /vagrant//start.sh .
+            cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
 
         SHELL
