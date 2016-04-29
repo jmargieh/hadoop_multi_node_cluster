@@ -25,7 +25,7 @@
 -->
 <property>
       <name>fs.defaultFS</name>
-      <value>hdfs://master:9000</value>
+      <value>hdfs://master:54310</value>
       <description>NameNode URI</description>
 </property>
 </configuration>
