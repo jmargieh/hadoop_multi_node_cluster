@@ -55,6 +55,6 @@
     </property>
     <property>
         <name>mapreduce.jobtracker.address</name>
-        <value>jobtracker.alexjf.net:8021</value>
+        <value>localhost:8021</value>
     </property>
 </configuration>
