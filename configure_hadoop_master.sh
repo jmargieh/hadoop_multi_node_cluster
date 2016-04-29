@@ -30,7 +30,7 @@ rm -f hadoop-env.sh
 wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/hadoop-env.sh
 
 #OK
-#rm -f slaves
-#wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/slaves
+rm -f slaves
+wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/slaves
 #OK
-#wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/masters
+wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/masters
