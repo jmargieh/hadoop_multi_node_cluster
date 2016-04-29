@@ -31,6 +31,6 @@ wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/maste
 
 #OK
 rm -f slaves
-wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/slaves
+wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/slaves
 #OK
-wget https://raw.githubusercontent.com/jmargieh/hadoop_cluster/master/masters
+wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/masters
