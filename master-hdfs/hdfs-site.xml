@@ -12,10 +12,14 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License. See accompanying LICENSE file.
-
+-->
 <!-- Put site specific property overrides in this file. -->
 
 <configuration>
+<property>
+<name>dfs.permissions.enabled</name>
+<value>false</value>
+</property>
 <property>
  <name>dfs.replication</name>
  <value>1</value>
