@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 
-<!-- Put site-specific property overrides in this file. 
+<!-- Put site-specific property overrides in this file.
 	<property>
  		<name>mapreduce.framework.name</name>
  		<value>yarn</value>
@@ -9,20 +9,9 @@
 	</property>
 -->
 
-<configuration>
-	<property>
-  <name>mapred.job.tracker</name>
-  		<value>localhost:54311</value>
-  		<description>The host and port that the MapReduce job tracker runs
-  		at.  If "local", then jobs are run in-process as a single map
-  		and reduce task.
-  		</description>
- 	</property>
- 	<!--
-		<property>
- 		<name>mapreduce.framework.name</name>
- 		<value>yarn</value>
- 		<description>The framework for running mapreduce jobs</description>
-	</property>
--->
-</configuration>
+	<configuration>
+	    <property>
+	        <name>mapreduce.framework.name</name>
+	        <value>yarn</value>
+	    </property>
+	</configuration>
