@@ -20,7 +20,7 @@
     </property>
     <property>
         <name>mapreduce.framework.name</name>
-        <value>yarn</value>
+        <value>local</value>
         <description>Execution framework.</description>
     </property>
     <property>
