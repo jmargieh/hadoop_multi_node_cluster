@@ -3,13 +3,13 @@ Hadoop 2.7.2 Multi Node Cluster Setup
 -------------
 Clone this project to create a 2 - master/slave nodes Apache Hadoop cluster
 ```sh
-$ **git** clone https://github.com/jmargieh/hadoop_multi_node_cluster.git
+$ git clone https://github.com/jmargieh/hadoop_multi_node_cluster.git
 ```
 Deploying the cluster
 -------------
 After cloning this repository, change into the directory and run:
 ```sh
-**./start.sh**
+./start.sh
 ```
 This will set up 2 machines - master, slave. Each of them will have a CPUs and .512MB of RAM. If this is too much for your machine, adjust the Vagrantfile to match your needs.
 
