@@ -5,6 +5,8 @@ Clone this project to create a 2 - master/slave nodes Apache Hadoop cluster
 ```sh
 $ git clone https://github.com/jmargieh/hadoop_multi_node_cluster.git
 ```
+**Prerequisites:** : Vagrant & VirtualBox
+
 Deploying the cluster
 -------------
 After cloning this repository, change into the directory and run:
