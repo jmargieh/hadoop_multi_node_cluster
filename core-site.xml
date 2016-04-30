@@ -17,12 +17,10 @@
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
-<!--
 <property>
   <name>hadoop.tmp.dir</name>
   <value>/home/vagrant/hadoop-2.7.2/tmp</value>
 </property>
--->
 <property>
       <name>fs.defaultFS</name>
       <value>hdfs://master:54310</value>

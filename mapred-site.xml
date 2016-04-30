@@ -57,4 +57,17 @@
         <name>mapreduce.jobtracker.address</name>
         <value>master:8021</value>
     </property>
+    <!-- edits below
+    <property>
+      <name>mapreduce.job.maps</name>
+      <value>2</value>
+    </property>
+    <property>
+      <name>mapreduce.task.profile.reduces</name>
+      <value>2</value>
+    </property>
+    <property>
+      <name>mapreduce.task.profile.maps</name>
+      <value>2</value>
+    </property> -->
 </configuration>
