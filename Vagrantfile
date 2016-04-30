@@ -14,7 +14,14 @@ Vagrant.configure(2) do |config|
             sudo echo "70.68.47.19 master" >> /etc/hosts
             sudo echo "70.68.47.20 slave" >> /etc/hosts
 
-            #sudo echo "master" >> /etc/hostname
+            #remove 127.0.1.1 master master from hosts
+            sudo sed -i.bak '/127.0.1.1 master master/d' /etc/hosts
+
+            #disable ipv6
+            echo "disabling ipv6"
+            sudo echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 
             # Update VM to the latest binaries from distribution
             # package.
@@ -50,18 +57,11 @@ Vagrant.configure(2) do |config|
             cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
 
-            #remove 127.0.1.1 master master from hosts
-            cp /vagrant/update-hosts.sh .
-            sudo chmod +x ./update-hosts.sh
-            ./update-hosts.sh remove 127.0.1.1 master master
-
-            #disable ipv6
-            sudo echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
-            sudo echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
-            sudo echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
-
             sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
-
+            #go to hadoop home and format nodename (only on master)
+            echo "formatting namenode started!"
+            cd /home/vagrant/hadoop-2.7.2/
+            sudo bin/hadoop namenode -format
 
         SHELL
     end
@@ -77,7 +77,14 @@ Vagrant.configure(2) do |config|
             sudo echo "70.68.47.20 slave" >> /etc/hosts
             sudo echo "70.68.47.19 master" >> /etc/hosts
 
-            #sudo echo "slave" >> /etc/hostname
+            #remove 127.0.1.1 slave slave from hosts
+            sudo sed -i.bak '/127.0.1.1 slave slave/d' /etc/hosts
+
+            #disable ipv6
+            echo "disabling ipv6"
+            sudo echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 
             # Update VM to the latest binaries from distribution
             # package.
@@ -112,16 +119,6 @@ Vagrant.configure(2) do |config|
             sudo chmod +x ./after_startup.sh
             cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
-
-            #remove 127.0.1.1 slave slave from hosts
-            cp /vagrant/update-hosts.sh .
-            sudo chmod +x ./update-hosts.sh
-            ./update-hosts.sh remove 127.0.1.1 slave slave
-
-            #disable ipv6
-            sudo echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
-            sudo echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
-            sudo echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
 
             sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
 
