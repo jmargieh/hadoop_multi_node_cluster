@@ -10,6 +10,7 @@
 -->
 
 <configuration>
+  <!--
     <property>
         <name>yarn.app.mapreduce.am.resource.mb</name>
         <value>1024</value>
@@ -17,11 +18,6 @@
     <property>
         <name>yarn.app.mapreduce.am.command-opts</name>
         <value>-Xmx768m</value>
-    </property>
-    <property>
-        <name>mapreduce.framework.name</name>
-        <value>local</value>
-        <description>Execution framework.</description>
     </property>
     <property>
         <name>mapreduce.map.cpu.vcores</name>
@@ -52,10 +48,15 @@
         <name>mapreduce.reduce.java.opts</name>
         <value>-Xmx768m</value>
         <description>Heap-size for child jvms of reduces.</description>
+    </property> -->
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>local</value>
+        <description>Execution framework.</description>
     </property>
     <property>
         <name>mapreduce.jobtracker.address</name>
-        <value>master:8021</value>
+        <value>master:9001</value>
     </property>
     <!-- edits below
     <property>
