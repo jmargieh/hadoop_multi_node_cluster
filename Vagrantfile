@@ -52,16 +52,25 @@ Vagrant.configure(2) do |config|
             sudo chmod +x ./configure_hadoop_master.sh
             ./configure_hadoop_master.sh
 
+            #grant vagrant user permissions
+            echo "chowning vagrant user"
+            sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
+
             cp /vagrant/after_startup.sh .
             sudo chmod +x ./after_startup.sh
             cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
 
-            sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
             #go to hadoop home and format nodename (only on master)
-            echo "formatting namenode started!"
             cd /home/vagrant/hadoop-2.7.2/
             sudo bin/hadoop namenode -format
+
+            echo "starting namenode"
+            sudo sbin/hadoop-daemon.sh start namenode
+            echo "starting datanode"
+            sudo sbin/hadoop-daemon.sh start datanode
+            echo "starting resourcemanager"
+            sudo sbin/yarn-daemon.sh start resourcemanager
 
         SHELL
     end
@@ -115,12 +124,19 @@ Vagrant.configure(2) do |config|
             sudo chmod +x ./configure_hadoop_slave.sh
             ./configure_hadoop_slave.sh
 
+            echo "chowning vagrant user"
+            sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
+
             cp /vagrant/after_startup.sh .
             sudo chmod +x ./after_startup.sh
             cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
 
-            sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
+            cd /home/vagrant/hadoop-2.7.2/
+            echo "starting datanode"
+            sudo sbin/hadoop-daemon.sh start datanode
+            echo "starting nodemanager"
+            sudo sbin/yarn-daemon.sh start nodemanager
 
         SHELL
     end
