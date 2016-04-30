@@ -5,7 +5,8 @@ Vagrant.configure(2) do |config|
     config.vm.define "nodeA" do |nodeA|
         nodeA.vm.box = "ubuntu/trusty64"
         nodeA.vm.hostname = "master"
-        nodeA.vm.network "forwarded_port", guest: 8088, host: 8088#, host_ip: "70.68.47.19"
+        #nodeA.vm.network "forwarded_port", guest: 8088, host: 8088#, host_ip: "70.68.47.19"
+        nodeA.vm.network "private_network", ip: "70.68.47.19"
         nodeA.vm.provision "shell", inline: <<-SHELL
 
             # !!! YOU NEED TO REPLACE HERE CORRECT IP ADDRESS !!!
@@ -49,6 +50,18 @@ Vagrant.configure(2) do |config|
             cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
 
+            #remove 127.0.1.1 master master from hosts
+            cp /vagrant/update-hosts.sh .
+            sudo chmod +x ./update-hosts.sh
+            ./update-hosts.sh remove 127.0.1.1 master master
+
+            #disable ipv6
+            sudo echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
+
+            sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
+
 
         SHELL
     end
@@ -56,7 +69,8 @@ Vagrant.configure(2) do |config|
     config.vm.define "nodeB" do |nodeB|
         nodeB.vm.box = "ubuntu/trusty64"
         nodeB.vm.hostname = "slave"
-        nodeB.vm.network "forwarded_port", guest: 8088, host: 9088#, host_ip: "70.68.47.20"
+        #nodeB.vm.network "forwarded_port", guest: 8088, host: 9088#, host_ip: "70.68.47.20"
+        nodeB.vm.network "private_network", ip: "70.68.47.20"
         nodeB.vm.provision "shell", inline: <<-SHELL
 
             # !!! YOU NEED TO REPLACE HERE CORRECT IP ADDRESS !!!
@@ -98,6 +112,18 @@ Vagrant.configure(2) do |config|
             sudo chmod +x ./after_startup.sh
             cp /vagrant/start.sh .
             sudo chmod +x ./start.sh
+
+            #remove 127.0.1.1 slave slave from hosts
+            cp /vagrant/update-hosts.sh .
+            sudo chmod +x ./update-hosts.sh
+            ./update-hosts.sh remove 127.0.1.1 slave slave
+
+            #disable ipv6
+            sudo echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf
+            sudo echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf
+
+            sudo chown -R vagrant /home/vagrant/hadoop-2.7.2/
 
         SHELL
     end

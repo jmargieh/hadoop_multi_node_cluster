@@ -9,11 +9,6 @@ sudo rm -rf /home/vagrant/hadoop-2.7.2/tmp/
 sudo mkdir -p /home/vagrant/hadoop-2.7.2/tmp/
 sudo chmod -R 775 /home/vagrant/hadoop-2.7.2/tmp/
 
-#sudo mkdir -p /home/vagrant/hadoop-2.7.2/hdfs/namenode
-#sudo chmod -R 775 /home/vagrant/hadoop-2.7.2/hdfs/namenode
-#sudo mkdir -p /home/vagrant/hadoop-2.7.2/hdfs/datanode
-#sudo chmod -R 775 /home/vagrant/hadoop-2.7.2/hdfs/datanode
-
 
 cd /home/vagrant/hadoop-2.7.2/etc/hadoop/
 
@@ -21,7 +16,7 @@ cd /home/vagrant/hadoop-2.7.2/etc/hadoop/
 #OK
 rm -f core-site.xml
 wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/core-site.xml
-# only on master
+#Master Only
 #rm -f mapred-site.xml
 #wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/mapred-site.xml
 #OK
