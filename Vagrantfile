@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "nodeA" do |nodeA|
         nodeA.vm.box = "ubuntu/trusty64"
         nodeA.vm.hostname = "master"
-        #nodeA.vm.network "forwarded_port", guest: 8088, host: 8088#, host_ip: "70.68.47.19"
+        nodeA.vm.network "forwarded_port", guest: 8088, host: 8088#, host_ip: "70.68.47.19"
         nodeA.vm.network "private_network", ip: "70.68.47.19"
         nodeA.vm.provision "shell", inline: <<-SHELL
 
@@ -81,7 +81,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "nodeB" do |nodeB|
         nodeB.vm.box = "ubuntu/trusty64"
         nodeB.vm.hostname = "slave"
-        #nodeB.vm.network "forwarded_port", guest: 8088, host: 9088#, host_ip: "70.68.47.20"
+        nodeB.vm.network "forwarded_port", guest: 8088, host: 9088#, host_ip: "70.68.47.20"
         nodeB.vm.network "private_network", ip: "70.68.47.20"
         nodeB.vm.provision "shell", inline: <<-SHELL
 
