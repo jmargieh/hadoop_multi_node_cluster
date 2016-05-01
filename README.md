@@ -35,6 +35,10 @@ $ hadoop jar ../share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar rando
 ```
 to run a mapreduce job
 
+```sh
+open your browser & navigate - http://70.68.47.19:8088/cluster/cluster
+```
+to view YARN web user interface
 
 Screenshots
 -------------
