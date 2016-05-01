@@ -42,8 +42,15 @@ to view YARN web user interface
 
 Screenshots
 -------------
+
+Distributed shell output
+-------------
 ![distributed shell output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/distributed-shell-succeed.png)
 
+randomwriter mapreduce output
+-------------
 ![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/randomwriter-mapreduce-success.png)
 
+testing communication between master-slave
+-------------
 ![master slave communication](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/master-slave-comunication.png)
