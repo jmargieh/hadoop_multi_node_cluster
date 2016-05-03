@@ -13,7 +13,7 @@ After cloning this repository, change into the directory and run:
 ```sh
 ./start.sh
 ```
-This will set up 2 machines - master, slave. Each of them will have a CPU and 1024MB of RAM. If this is too much for your machine, adjust the Vagrantfile to match your needs.
+This will set up 2 machines - master, slave. Each of them will have a CPU and 2048MB of RAM. If this is too much for your machine, adjust the Vagrantfile to match your needs.
 
 The `master` machine acts as the datanode, namenode and the yarn resourcemanager, the slave acts as a data node and runs node manager.
 
@@ -51,6 +51,6 @@ randomwriter mapreduce output
 -------------
 ![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/randomwriter-mapreduce-success.png)
 
-testing communication between master-slave
+Testing communication between master-slave
 -------------
 ![master slave communication](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/master-slave-comunication.png)
