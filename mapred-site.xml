@@ -44,7 +44,7 @@
 </property>
 <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Xmx3072m</value>
+    <value>-Xmx1024m</value>
     <description>Heap-size for child jvms of maps.</description>
 </property>
 <property>
@@ -54,7 +54,7 @@
 </property>
 <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Xmx3072m</value>
+    <value>-Xmx2560M</value>
     <description>Heap-size for child jvms of reduces.</description>
 </property>
 </configuration>
