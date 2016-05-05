@@ -74,6 +74,8 @@ Vagrant.configure(2) do |config|
             sudo sbin/hadoop-daemon.sh start datanode
             echo "starting resourcemanager"
             sudo sbin/yarn-daemon.sh start resourcemanager
+            echo "starting secondarynamenode"
+            sudo sbin/hadoop-daemon.sh start secondarynamenode
 
         SHELL
     end

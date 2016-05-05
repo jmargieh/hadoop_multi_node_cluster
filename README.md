@@ -15,7 +15,7 @@ After cloning this repository, change into the directory and run:
 ```
 This will set up 2 machines - master, slave. Each of them will have a CPU and 2048MB of RAM. If this is too much for your machine, adjust the Vagrantfile to match your needs.
 
-The `master` machine acts as the datanode, namenode and the yarn resourcemanager, the slave acts as a data node and runs node manager.
+The `master` machine acts as the datanode, namenode, secondarynamenode and the yarn resourcemanager, the slave acts as a data node and runs node manager.
 
 
 Testing
