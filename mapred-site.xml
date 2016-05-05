@@ -19,6 +19,34 @@
         <name>mapreduce.jobtracker.address</name>
         <value>master:9001</value>
     </property>
+
+
+    <property>
+    <name>mapreduce.map.memory.mb</name>
+    <value>568</value>
+    </property>
+    <property>
+    <name>mapreduce.reduce.memory.mb</name>
+    <value>1136</value>
+    </property>
+    <property>
+    <name>mapreduce.map.java.opts</name>
+    <value>-Xmx454mb</value>
+    </property>
+    <property>
+    <name>mapreduce.reduce.java.opts</name>
+    <value>-Xmx908mb</value>
+    </property>
+    <property>
+        <name>yarn.app.mapreduce.am.command-opts</name>
+        <value>-Xmx908m</value>
+    </property>
+    <property>
+    <name>yarn.app.mapreduce.am.resource.mb</name>
+    <value>1136</value>
+  </property>
+
+<!--
     <property>
     <name>yarn.app.mapreduce.am.resource.mb</name>
     <value>1024</value>
@@ -57,4 +85,5 @@
     <value>-Xmx2560M</value>
     <description>Heap-size for child jvms of reduces.</description>
 </property>
+-->
 </configuration>
