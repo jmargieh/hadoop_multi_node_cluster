@@ -39,22 +39,22 @@
 </property>
 <property>
     <name>mapreduce.map.memory.mb</name>
-    <value>1024</value>
+    <value>2048</value>
     <description>Larger resource limit for maps.</description>
 </property>
 <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Xmx768m</value>
+    <value>-Xmx3072m</value>
     <description>Heap-size for child jvms of maps.</description>
 </property>
 <property>
     <name>mapreduce.reduce.memory.mb</name>
-    <value>2048</value>
+    <value>4096</value>
     <description>Larger resource limit for reduces.</description>
 </property>
 <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Xmx768m</value>
+    <value>-Xmx3072m</value>
     <description>Heap-size for child jvms of reduces.</description>
 </property>
 </configuration>
