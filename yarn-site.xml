@@ -34,6 +34,7 @@
     <value>master:8031</value>
 </property>
 
+<!-- 4GB, 2/1 CPU -->
 <property>
 <description>Amount of physical memory, in MB, that can be allocated for containers.</description>
 <name>yarn.nodemanager.resource.memory-mb</name>
@@ -51,5 +52,6 @@ and will get capped to this value.</description>
 <name>yarn.scheduler.maximum-allocation-mb</name>
 <value>3072</value>
 </property>
+
 
 </configuration>
