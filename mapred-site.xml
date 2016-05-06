@@ -23,31 +23,31 @@
 
     <property>
     <name>mapreduce.task.io.sort.mb</name>
-    <value>409</value>
+    <value>272</value>
     </property>
     <property>
     <name>mapreduce.map.memory.mb</name>
-    <value>1024</value>
+    <value>682</value>
     </property>
     <property>
     <name>mapreduce.reduce.memory.mb</name>
-    <value>2048</value>
+    <value>1364</value>
     </property>
     <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Xmx819m</value>
+    <value>-Xmx545m</value>
     </property>
     <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Xmx1638m</value>
+    <value>-Xmx1091m</value>
     </property>
     <property>
         <name>yarn.app.mapreduce.am.command-opts</name>
-        <value>-Xmx1638m</value>
+        <value>-Xmx1091m</value>
     </property>
     <property>
     <name>yarn.app.mapreduce.am.resource.mb</name>
-    <value>2048</value>
+    <value>1364</value>
   </property>
 
 <!--

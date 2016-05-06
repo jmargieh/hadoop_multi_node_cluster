@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
     config.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--cpus", "2", "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "3072"]
     end
     config.vm.define "nodeA" do |nodeA|
         nodeA.vm.box = "ubuntu/trusty64"
@@ -76,6 +76,8 @@ Vagrant.configure(2) do |config|
             sudo sbin/yarn-daemon.sh start resourcemanager
             echo "starting secondarynamenode"
             sudo sbin/hadoop-daemon.sh start secondarynamenode
+            echo "starting nodemanager"
+            sudo sbin/yarn-daemon.sh start nodemanager
 
         SHELL
     end
