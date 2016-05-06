@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
     config.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "3072"]
+      vb.customize ["modifyvm", :id, "--cpus", "2", "--memory", "4096"]
     end
     config.vm.define "nodeA" do |nodeA|
         nodeA.vm.box = "ubuntu/trusty64"
