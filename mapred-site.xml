@@ -20,7 +20,7 @@
         <value>master:9001</value>
     </property>
 
-
+<!--
     <property>
     <name>mapreduce.task.io.sort.mb</name>
     <value>409</value>
@@ -49,6 +49,8 @@
     <name>yarn.app.mapreduce.am.resource.mb</name>
     <value>2048</value>
   </property>
+-->
+
 
 <!--
     <property>
