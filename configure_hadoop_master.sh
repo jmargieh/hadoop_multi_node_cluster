@@ -29,11 +29,11 @@ wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master
 rm -f hadoop-env.sh
 wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/hadoop-env.sh
 #memory configurations
-rm -f yarn-env.sh
-wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/yarn-env.sh
+#rm -f yarn-env.sh
+#wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/yarn-env.sh
 
-rm -f mapred-env.sh
-wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/mapred-env.sh
+#rm -f mapred-env.sh
+#wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/mapred-env.sh
 
 rm -f slaves
 wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/slaves
