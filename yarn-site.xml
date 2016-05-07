@@ -37,7 +37,10 @@
 	    <name>yarn.resourcemanager.resource-tracker.address</name>
 	    <value>master:8031</value>
 	</property>
-
+	<property>
+	<name>yarn.nodemanager.vmem-pmem-ratio</name>
+	<value>3</value>
+	</property>
 <!-- 2GB, 1 CPU -->
 <!--
 	<property>
