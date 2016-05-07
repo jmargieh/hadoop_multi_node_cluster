@@ -37,35 +37,8 @@
 	    <name>yarn.resourcemanager.resource-tracker.address</name>
 	    <value>master:8031</value>
 	</property>
-	<!-- alexf -->
-	<!--
-	<property>
-	    <name>yarn.scheduler.minimum-allocation-mb</name>
-	    <value>1024</value>
-	</property>
-	<property>
-	    <name>yarn.scheduler.maximum-allocation-mb</name>
-	    <value>2048</value>
-	</property>
-	<property>
-	    <name>yarn.scheduler.minimum-allocation-vcores</name>
-	    <value>1</value>
-	</property>
-	<property>
-	    <name>yarn.scheduler.maximum-allocation-vcores</name>
-	    <value>2</value>
-	</property>
-	<property>
-	    <name>yarn.nodemanager.resource.memory-mb</name>
-	    <value>4096</value>
-	</property>
-	<property>
-	    <name>yarn.nodemanager.resource.cpu-vcores</name>
-	    <value>4</value>
-	</property>
--->
-<!-- 3GB, 1 CPU -->
-<!--
+
+<!-- 2GB, 1 CPU -->
 	<property>
 	<description>Amount of physical memory, in MB, that can be allocated for containers.</description>
 	<name>yarn.nodemanager.resource.memory-mb</name>
@@ -83,7 +56,6 @@
 	<name>yarn.scheduler.maximum-allocation-mb</name>
 	<value>2046</value>
 	</property>
--->
 <!-- 4GB, 2/1 CPU -->
 <!--
 <property>

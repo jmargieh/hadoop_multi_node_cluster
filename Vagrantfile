@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-    #config.vm.provider :virtualbox do |vb|
-    #  vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "2048"]
-    #end
+    config.vm.provider :virtualbox do |vb|
+      vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "2048"]
+    end
     config.vm.define "nodeA" do |nodeA|
         nodeA.vm.box = "ubuntu/trusty64"
         nodeA.vm.hostname = "master"

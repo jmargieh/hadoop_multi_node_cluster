@@ -20,8 +20,7 @@
         <value>master:9001</value>
     </property>
 
-<!-- 3GB, 1 CPU -->
-<!--
+<!-- 2GB, 1 CPU -->
     <property>
     <name>mapreduce.task.io.sort.mb</name>
     <value>272</value>
@@ -50,7 +49,6 @@
     <name>yarn.app.mapreduce.am.resource.mb</name>
     <value>1364</value>
   </property>
--->
 
 <!-- 4GB, 1/2 CPU -->
 <!--
