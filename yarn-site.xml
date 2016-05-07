@@ -18,6 +18,10 @@
 		  <value>master</value>
 	</property>
 	<property>
+		<name>yarn.nodemanager.aux-services.mapreduce_shuffle.class</name>
+		<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+	<property>
 	    <name>yarn.nodemanager.aux-services</name>
 	    <value>mapreduce_shuffle</value>
 	</property>
@@ -33,6 +37,8 @@
 	    <name>yarn.resourcemanager.resource-tracker.address</name>
 	    <value>master:8031</value>
 	</property>
+	<!-- alexf -->
+	<!--
 	<property>
 	    <name>yarn.scheduler.minimum-allocation-mb</name>
 	    <value>1024</value>
@@ -57,7 +63,27 @@
 	    <name>yarn.nodemanager.resource.cpu-vcores</name>
 	    <value>4</value>
 	</property>
-
+-->
+<!-- 3GB, 1 CPU -->
+<!--
+	<property>
+	<description>Amount of physical memory, in MB, that can be allocated for containers.</description>
+	<name>yarn.nodemanager.resource.memory-mb</name>
+	<value>2046</value>
+	</property>
+	<property>
+	<description>The minimum allocation size for every container request at the RM, in MBs. Memory requests lower than this won't take effect,
+	and the specified value will get allocated at minimum.</description>
+	<name>yarn.scheduler.minimum-allocation-mb</name>
+	<value>682</value>
+	</property>
+	<property>
+	<description>The maximum allocation size for every container request at the RM, in MBs. Memory requests higher than this won't take effect,
+	and will get capped to this value.</description>
+	<name>yarn.scheduler.maximum-allocation-mb</name>
+	<value>2046</value>
+	</property>
+-->
 <!-- 4GB, 2/1 CPU -->
 <!--
 <property>
