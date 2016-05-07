@@ -15,22 +15,16 @@ cd /home/vagrant/hadoop-2.7.2/etc/hadoop/
 #get configuration files
 
 rm -f core-site.xml
-wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/core-site.xml
+wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/hadoop/core-site.xml
 
 rm -f mapred-site.xml
-wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/mapred-site.xml
+wget https://raw.githubusercontent.com/jmargieh/hadoop_single_node_cluster/master/files/hadoop/mapred-site.xml
 
 rm -f hdfs-site.xml
-wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/master-hdfs/hdfs-site.xml
+wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/hadoop/hdfs-site.xml
 
 rm -f yarn-site.xml
-wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/yarn-site.xml
+wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/hadoop/yarn-site.xml
 
 rm -f hadoop-env.sh
-wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/hadoop-env.sh
-#memory configurations
-#rm -f yarn-env.sh
-#wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/yarn-env.sh
-
-#rm -f mapred-env.sh
-#wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/mapred-env.sh
+wget https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/hadoop/hadoop-env.sh
