@@ -43,6 +43,11 @@ to view YARN web user interface
 Screenshots
 -------------
 
+YARN web user interface
+-------------
+![yarn web user interface](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/hadoop-yarn-web-ui.png)
+
+
 Distributed shell output
 -------------
 ![distributed shell output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/distributed-shell-succeed.png)
