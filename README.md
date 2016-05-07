@@ -45,17 +45,17 @@ Screenshots
 
 YARN web user interface
 -------------
-![yarn web user interface](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/hadoop-yarn-web-ui.png)
+![yarn web user interface](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/hadoop-yarn-web-ui.png)
 
 
 Distributed shell output
 -------------
-![distributed shell output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/distributed-shell-succeed.png)
+![distributed shell output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/distributed-shell-succeed.png)
 
 randomwriter mapreduce output
 -------------
-![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/randomwriter-mapreduce-success.png)
+![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/randomwriter-mapreduce-success.png)
 
 Testing communication between master-slave
 -------------
-![master slave communication](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/master-slave-comunication.png)
+![master slave communication](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/master-slave-comunication.png)
