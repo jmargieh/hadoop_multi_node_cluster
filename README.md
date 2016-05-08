@@ -33,7 +33,12 @@ to run distrebuted shell.
 ```sh
 $ hadoop jar ../share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar randomwriter \out
 ```
-to run a mapreduce job
+to run randomwriter mapreduce job
+
+```sh
+$ hadoop jar ../share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar pi 16 1000
+```
+to run Pi mapreduce job
 
 ```sh
 open your browser & navigate - http://70.68.47.19:8088/
@@ -55,6 +60,10 @@ Distributed shell output
 randomwriter mapreduce output
 -------------
 ![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/randomwriter-mapreduce-success.png)
+
+Pi mapreduce output
+-------------
+![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/pi-mapreduce-succeeded.png)
 
 Testing communication between master-slave
 -------------
