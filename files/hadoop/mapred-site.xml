@@ -19,8 +19,4 @@
         <name>mapreduce.jobtracker.address</name>
         <value>master:9001</value>
     </property>
-    <property>
-    <name>mapreduce.task.io.sort.mb</name>
-    <value>272</value>
-    </property>
 </configuration>
