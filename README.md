@@ -50,7 +50,7 @@ Screenshots
 
 YARN web user interface
 -------------
-![yarn web user interface](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/hadoop-yarn-web-ui.png)
+![yarn web user interface](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/hadoop-yarn-web-ui-.png)
 
 
 Distributed shell output
@@ -59,7 +59,7 @@ Distributed shell output
 
 randomwriter mapreduce output
 -------------
-![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/randomwriter-mapreduce-success.png)
+![mapreduce output](https://raw.githubusercontent.com/jmargieh/hadoop_multi_node_cluster/master/files/images/randomwriter-mapreduce-success-.png)
 
 Pi mapreduce output
 -------------
