@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
     config.vm.provider :virtualbox do |vb|
-      vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "2048"]
+      vb.customize ["modifyvm", :id, "--cpus", "1", "--memory", "3072"]
     end
     config.vm.define "nodeA" do |nodeA|
         nodeA.vm.box = "ubuntu/trusty64"
@@ -50,6 +50,10 @@ Vagrant.configure(2) do |config|
             cp /vagrant/install_hadoop.sh .
             sudo chmod +x ./install_hadoop.sh
             ./install_hadoop.sh
+
+            cp /vagrant/install_spark.sh .
+            sudo chmod +x ./install_spark.sh
+            ./install_spark.sh
 
             cp /vagrant/configure_hadoop_master.sh .
             sudo chmod +x ./configure_hadoop_master.sh
@@ -126,6 +130,10 @@ Vagrant.configure(2) do |config|
             cp /vagrant/install_hadoop.sh .
             sudo chmod +x ./install_hadoop.sh
             ./install_hadoop.sh
+
+            cp /vagrant/install_spark.sh .
+            sudo chmod +x ./install_spark.sh
+            ./install_spark.sh
 
             cp /vagrant/configure_hadoop_slave.sh .
             sudo chmod +x ./configure_hadoop_slave.sh

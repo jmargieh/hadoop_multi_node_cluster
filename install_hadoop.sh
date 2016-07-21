@@ -9,7 +9,7 @@ fi
 
 sudo apt-get install wget curl -y
 echo "Downloading & Setup Hadoop!"
-wget http://apache.mivzakim.net/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz
+wget http://www-eu.apache.org/dist/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz
 
 #extract file
 tar -xzf hadoop-2.7.2.tar.gz
